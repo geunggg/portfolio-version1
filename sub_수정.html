@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>053</title>
+    <!-- 파비콘 링크 -->
+    <link rel="shortcut icon" href="images/053_1_kIQ_icon.ico">
+    <!-- 캐러셀 스크립트 -->
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+
+
+    <style>
+    /* 웹폰트 링크 */
+    @font-face {
+        font-family: 'ONE-Mobile-Regular';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'ONE-Mobile-Title';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Title.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    /* 초기화 스타일 */
+    * {
+        margin:0; 
+        padding:0; 
+        box-sizing: border-box;}
+    body {
+        background: #f4e9f3; 
+        font-family: 'ONE-Mobile-Regular';}
+    a {
+        text-decoration: none; 
+        color:black;}
+    li {
+        list-style: none;}
+
+    .section_wrapper {
+        width:100%; 
+        background: white;}
+    section .wrapper {
+        width :1200px; 
+        margin:0 auto; 
+        padding-bottom: 150px;}
+
+    /* 섹션 1 */
+    #mainimage {
+        width: 100%; 
+        height:480px; 
+        margin-bottom: 150px;}
+    #main {
+        width:1200px; 
+        margin:0 auto;}
+
+    /*@media screen and (max-width:1200px) {
+        #mainimage #main {width:100%; }
+    }*/
+
+    
+    #main header {
+        position: relative;}
+    #main header #mypage {
+        right:0; 
+        top:0; 
+        position: absolute;}
+    #main #logo {
+        text-align: center; 
+        padding-top:40px;}
+
+    #main #main_text {
+        padding-top: 80px; 
+        padding-bottom: 70px; 
+        font-family: 'ONE-Mobile-Title';
+        text-align: right;}
+    #main #main_text p {
+        font-size:4em; 
+        line-height: 110px; 
+        color: white; 
+        text-shadow: 4px 1px 1px rgba(0,0,0,0.2) ; 
+        letter-spacing: 0.1em;}
+
+    #menu_icon {
+        padding-top:50px; 
+        display: flex; 
+        justify-content:center;}
+    #menu_icon p {
+        font-size: 2.0em; 
+        font-family: 'ONE-Mobile-Title'; 
+        color:#b561a3; 
+        padding-top:30px; 
+        margin-left: 30px;}
+
+    #address {
+        padding-top:50px; 
+        padding-bottom: 50px; 
+        display:flex;  
+        justify-content: space-between; }
+    #address input[type=text] {
+        width:950px; 
+        height:45px; 
+        border-radius: 50px; 
+        border:2px solid #b561a3;}
+    #address #address_icon {
+        margin-left:60px; 
+        cursor: pointer;}
+    #address #search {
+        margin-right:60px;}
+
+    /* 섹션 2 */
+
+    #menu {
+        display: flex; 
+        justify-content: space-between; 
+        flex-wrap: wrap;}
+    #menu .item {
+        width:26%; 
+        height:140px; 
+        display: flex; 
+        margin-bottom: 100px;
+        justify-content:center; }
+    #menu .item .item_text {
+        padding-top: 10px;}
+    #menu .item .item_text h3 {
+        text-align: center; 
+        padding-bottom:10px;}
+
+    #menu .item .item_text b {
+        color:#b561a3;}
+    #menu .item .item_text h3 p {
+        text-align: center;}
+
+
+    #menu .item > img {
+        margin: 15px;}
+
+    .dt_flex {
+        display:flex;
+        justify-content: center; 
+        padding-top: 10px;}
+    .item .delivery {
+        background: url("./images/delivery.png") center; 
+        width:50px; 
+        height: 50px; 
+        margin: 0 5px; 
+        cursor: pointer;}
+    .item .delivery:hover {
+        background: url("./images/h_delivery.png") center;
+        width:50px; 
+        height: 50px;  
+        cursor: pointer;}
+    .item .takeout {
+        background: url("./images/takeout.png") center;
+        width:50px; 
+        height: 50px; 
+        margin: 0 5px; 
+        cursor: pointer;}
+    .item .takeout:hover {
+        background: url("./images/h_takeout.png") center;
+        width:50px; 
+        height: 50px; 
+        cursor: pointer;}
+
+
+    /* 푸터 */
+    footer { 
+        background: #efefef;}
+    footer .wrapper {
+        width : 1200px; 
+        height: 420px; 
+        margin:0 auto; 
+        display:flex;}
+    footer #footer_logo {
+        margin-top: 180px; 
+        flex:1;}
+
+    footer #contact {
+        flex:4;
+         margin-top: 130px;}
+    footer #contact li {
+        float:left; 
+        padding-right: 20px; 
+        padding-left:20px;
+        border-right: 1px solid black; 
+        margin-bottom:10px;}
+
+    footer #contact li:first-of-type {
+        padding-left:0px;}
+
+    footer #contact h3 {
+        font-size: 2.0em; 
+        font-family: 'ONE-Mobile-Title' ; 
+        margin-bottom:15px;}
+    footer #contact p {
+        margin-top: 10px; 
+        line-height: 20px; 
+        font-size: 0.8em; 
+        color:#707070;}
+    footer #sns {
+        margin-top:120px; 
+        flex:1.5;}
+
+    footer #sns a {
+        margin-right:20px; }
+    footer #sns a:last-child {
+        margin-right:0;}
+
+    /* 탑 버튼 */
+
+    #top_btn {
+        width:60px; 
+        height:60px; 
+        position: fixed; 
+        right:200px; 
+        bottom:100px; 
+        text-align: center; 
+        border-radius: 40px; 
+        line-height: 60px; 
+        border: 2px solid #b561a3; }
+
+    #top_btn > a {
+        color:#b561a3}
+
+    </style>
+</head>
+<body>
+    <section id="mainimage">
+        <div id="main">
+            <header>
+                <div id="logo">
+                    <img src="images/logo.png" width="180px" height="auto">
+                </div>
+                <div id="mypage">
+                    <a href="sub_mypage.html"><img src="images/mypage1.png" width="80px" height="auto"></a>
+                </div>
+            </header>
+            <div id="main_text">
+                <p>맛과 건강<br>
+                모두 생각 날 때</p>
+            </div>
+        </div>
+    </section>
+    <section class="section_wrapper">
+        <div class="wrapper">
+            <div id="menu_icon">
+                <img src="images/chicken.png">
+                <p>치킨</p>
+            </div>
+            <div id="address">
+                <div id="address_icon">
+                    <a href="https://www.google.com/maps/@35.9417306,128.5585406,15z?hl=ko" target="_blank"><img src="images/address.png"></a>
+                </div>
+                <input type="text" size="15" name="address"/>
+                <div id="search">
+                    <input type="image" src="images/search.png" alt="검색버튼">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section_wrapper">
+        <div class="wrapper">
+            <div class="banner">
+                <div class="bxslider">
+                    <img src="images/carousel01.png">
+                    <img src="images/carousel02.png">
+                    <img src="images/carousel03.png">
+                    <img src="images/carousel04.png">
+                    <img src="images/carousel05.png">
+                    <img src="images/carousel06.png">
+                    <img src="images/carousel07.png">
+                    <img src="images/carousel08.png">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section_wrapper">
+        <div class="wrapper">
+            <div id="menu">
+                <div class="item">
+                    <img src="images/chicken01.png">
+                    <div class="item_text">
+                        <h3>임영웅 티바<br>두마리 치킨</h3>
+                        <P><b>★4.8</b>/ 리뷰 1384</P>
+                        <div class="dt_flex">
+                            <div class="delivery"></div>
+                            <div class="takeout"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/chicken01.png">
+                    <div class="item_text">
+                        <h3>임영웅 티바<br>두마리 치킨</h3>
+                        <P><b>★4.8</b>/ 리뷰 1384</P>
+                        <div class="dt_flex">
+                            <div class="delivery"></div>
+                            <div class="takeout"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/chicken01.png">
+                    <div class="item_text">
+                        <h3>임영웅 티바<br>두마리 치킨</h3>
+                        <P><b>★4.8</b>/ 리뷰 1384</P>
+                        <div class="dt_flex">
+                            <div class="delivery"></div>
+                            <div class="takeout"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/chicken01.png">
+                    <div class="item_text">
+                        <h3>임영웅 티바<br>두마리 치킨</h3>
+                        <P><b>★4.8</b>/ 리뷰 1384</P>
+                        <div class="dt_flex">
+                            <div class="delivery"></div>
+                            <div class="takeout"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/chicken01.png">
+                    <div class="item_text">
+                        <h3>임영웅 티바<br>두마리 치킨</h3>
+                        <P><b>★4.8</b>/ 리뷰 1384</P>
+                        <div class="dt_flex">
+                            <div class="delivery"></div>
+                            <div class="takeout"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/chicken01.png">
+                    <div class="item_text">
+                        <h3>임영웅 티바<br>두마리 치킨</h3>
+                        <P><b>★4.8</b>/ 리뷰 1384</P>
+                        <div class="dt_flex">
+                            <div class="delivery"></div>
+                            <div class="takeout"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/chicken01.png">
+                    <div class="item_text">
+                        <h3>임영웅 티바<br>두마리 치킨</h3>
+                        <P><b>★4.8</b>/ 리뷰 1384</P>
+                        <div class="dt_flex">
+                            <div class="delivery"></div>
+                            <div class="takeout"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/chicken01.png">
+                    <div class="item_text">
+                        <h3>임영웅 티바<br>두마리 치킨</h3>
+                        <P><b>★4.8</b>/ 리뷰 1384</P>
+                        <div class="dt_flex">
+                            <div class="delivery"></div>
+                            <div class="takeout"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/chicken01.png">
+                    <div class="item_text">
+                        <h3>임영웅 티바<br>두마리 치킨</h3>
+                        <P><b>★4.8</b>/ 리뷰 1384</P>
+                        <div class="dt_flex">
+                            <div class="delivery"></div>
+                            <div class="takeout"></div>
+                        </div>
+                    </div>
+                </div>      
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="wrapper">
+            <article id="footer_logo">
+                <a href="#"><img src="images/logo2.png" width="150px" height="auto"></a>
+            </article>
+            <article id="contact">
+                <h3>About Me </h3>
+                <ul>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">입점문의</a></li>
+                    <li><a href="#">공지사항</a></li>
+
+                </ul>
+                <br>
+                <p>(주)young4 / 사업자등록번호 : 781-85-00412 / 주소 : 대구 북구 구암로49길 24</p>
+                <p>대표전화 : 1600-0987대표메일 : young4@hanmail.net </p>
+                <p>(주)young4는 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 상품/ 거래정보 및 거래와 관련하여 요기요에 등록된 판매자의 고의 또는 과실로 소비자에게 발생하는 손해에 대해 (주)young4로 코리아는 책임을 지지 않습니다. 상품 및 거래에 관하여 보다 정확한 정보는 해당 판매자에게 직접 확인하여 주시기 바랍니다. Copyright 053. All Rights Reserved</p>
+            </article>
+            <article id="sns">
+                <a href="https://www.facebook.com/profile.php?id=100024428093159"><img src="images/fb.png"></a>
+                <a href="#"><img src="images/ista.png"></a>
+                <a href="https://www.youtube.com/"><img src="images/ytu.png"></a>
+                <a href="https://blog.naver.com/wldms7155"><img src="images/blog.png"></a>
+            </article>
+        </div>
+    </footer>
+    <div id="top_btn" style="cursor: pointer;" onclick="location.href='#top'">
+        <a href="#top"><b>TOP</b></a>
+    </div>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery.backstretch.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+          $(function() {
+             $.backstretch(
+                ["images/mainimage04.jpg", "images/mainimage03.jpg", "images/mainimage02.jpg", "images/mainimage01.jpg"],
+                {duration: 3500, fade: 750}
+            );
+            $('.bxslider').bxSlider({
+                auto:true,
+                autoHover: true,
+            });
+          });
+      </script>
+</body>
+</html>

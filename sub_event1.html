@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>053</title>
+    <!-- 파비콘 링크 -->
+    <link rel="shortcut icon" href="images/053_1_kIQ_icon.ico">
+
+    <style>
+    /* 웹폰트 링크 */
+    @font-face {
+        font-family: 'ONE-Mobile-Regular';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'ONE-Mobile-Title';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Title.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    /* 초기화 스타일 */
+    * {margin:0;
+        padding:0;
+        box-sizing: border-box;}
+    body {background: #f4e9f3;
+        font-family: 'ONE-Mobile-Regular';}
+    a {text-decoration: none;
+        color:black;}
+    li {list-style: none;}
+
+    .section_wrapper {
+        width:100%;
+        background: white;}
+    section .wrapper {
+        width :1200px; 
+        margin:0 auto; 
+        padding-bottom: 50px;}
+    
+    /* 섹션 1 */
+    /* 섹션 1 PC모드 */
+    @media screen and (min-width:1200px) {
+        section .wrapper {
+        padding-bottom: 100px;}
+        #main #main_text p {
+        font-size:4em; 
+        line-height: 110px;}
+        #main #main_text {
+        padding-top: 40px;}
+    }
+
+    /* 섹션 1 모바일모드 */
+    @media screen and (max-width:1200px) {
+        section .wrapper {
+        width:100%;}
+        #main #logo img {
+        width:120px;
+        height:auto;}
+        #main #main_text p {
+        font-size:2.8em; 
+        line-height: 90px;}
+        #main #main_text {
+        padding-top: 80px;}
+        #mainimage #main {
+            width:100%; }
+    }
+    /* 섹션 1 메인이미지/ 주소검색 */
+    #mainimage {
+        width: 100%; 
+        height:480px;}
+    #main {
+        width:1200px; 
+        margin:0 auto;}
+
+    #main header {
+        position: relative;}
+    #main header #mypage {
+        right:0; 
+        top:0; 
+        position: absolute;}
+    #main #logo {
+        text-align: center; 
+        padding-top:40px;}
+
+    #main #main_text {
+        font-family: 'ONE-Mobile-Title';
+        text-align: right;}
+    #main #main_text p {
+        color: white; 
+        text-shadow: 4px 1px 1px rgba(0,0,0,0.2) ; 
+        letter-spacing: 0.1em;}
+    #menu_icon {
+        padding-top:50px; 
+        display: flex; 
+        justify-content:center;}
+        
+    #menu_icon p {
+        font-size: 2.0em; 
+        font-family: 'ONE-Mobile-Title'; 
+        color:#b561a3; padding-top:30px; 
+        margin-left: 30px;
+        padding-top:30px;}
+
+    /* 색션 2 이벤트 창*/
+    .wrapper h1 {
+        text-align: center;
+        padding: 50px 0px;
+    }
+    .wrapper b {
+        color:#b561a3;
+    }
+    
+    #event_img img {
+        box-shadow: 4px 3px 3px rgba(0,0,0,0.2) ; 
+        border: 1px solid rgba(150,150,150,0.2);
+        
+    }
+
+    #event_img img:hover {
+        box-shadow: 0 0 10px #e5c6df;
+        transform: scale(1.02);
+        transition: .2s ease;
+        cursor: pointer;
+        border: 0px;
+    }
+    /* 섹션 2 PC모드 */
+    @media screen and (min-width:1200px) {
+        .wrapper h1 {
+        font-size: 3.0em;
+    }
+        #event_img img {
+        border-radius: 100px;
+        margin-bottom: 50px;
+    }
+    }
+
+    /* 섹션 2 모바일모드 */
+    @media screen and (max-width:1200px) {
+        #event_img {
+        width:90%;
+        margin: 0 auto;
+    }
+        #event_img img {
+        border-radius: 50px;
+        margin-bottom: 30px;
+    }
+        #event_img img {
+
+            width:100%;
+        }
+        .wrapper h1 {
+        font-size: 2.0em;
+    }
+    }
+/* 푸터 */
+    footer {
+        background: #efefef;
+    }
+    footer #contact li {
+    float:left; 
+    border-right: 1px solid black; 
+    }
+
+    /* 푸터 PC모드 */
+    @media screen and (min-width:1200px) {
+    footer .wrapper {
+        width : 1200px;
+        height: 440px;
+        margin:0 auto; 
+        display:flex;}
+    footer #footer_logo {
+        margin-top: 180px; 
+        flex:1;}
+    footer #footer_logo img {
+        width:150px;
+        height:auto;
+    }
+    footer #contact {
+        flex:4; 
+        margin-top: 130px;}
+    footer #contact li {
+        padding-right: 20px; 
+        padding-left:20px;
+        margin-bottom:10px;}
+    footer #contact li:first-of-type {
+        padding-left: 0px;}
+    footer #contact li:last-of-type {
+        border-right: 0px;}
+
+    footer #contact h3 {
+        font-size: 2.0em; 
+        font-family: 'ONE-Mobile-Title' ; 
+        margin-bottom:15px;}
+    footer #contact p {
+        margin-top: 10px; 
+        line-height: 20px; 
+        font-size: 0.8em; 
+        color:#707070;}
+    footer #sns {
+        margin-top:120px; 
+        flex:1.5;}
+        
+    footer #sns a {
+        margin-right:20px; }
+    footer #sns a:last-child {
+        margin-right:0;}
+    
+}
+
+/* 푸터 중간 모드 */
+@media screen and (min-width:800px) and (max-width:1200px) {
+    footer .wrapper {
+            width:90%;
+            margin:0 auto;}
+    footer #footer_logo {
+            width:100px;
+            margin: 0 auto;
+            padding:30px 0px;}
+    footer #footer_logo img {
+            width:100px;
+            height:auto;}
+    footer #contact h3 {
+        display:none;
+    }
+    footer #contact p {
+        padding: 0 20px;
+        text-align: center;
+        line-height: 15px; 
+        font-size: 0.7em; 
+        color:#707070;}
+    footer #contact ul {
+        width: 90%;
+        margin: 0 auto;
+    }
+    footer #contact li {
+            padding: 0 8%;
+            font-size:0.9em;
+            margin-bottom:20px;} 
+    footer #contact li:last-of-type {
+            border-right: 0px;}
+    footer #sns {
+        padding:20px 0;
+        width: 80%;
+        margin: 0 auto;}
+                
+    footer #sns a {
+        margin:0 9%;}
+    }
+
+/* 푸터 모바일 모드 */
+
+@media screen and (max-width:800px) {
+    footer .wrapper {
+        width:90%;
+        margin:0 auto;}
+    footer #footer_logo {
+        width:100px;
+        margin: 0 auto;
+        padding:30px 0px;}
+    footer #footer_logo img {
+        width:100px;
+        height:auto;}
+    footer #contact h3 {
+    display:none;
+}
+    footer #contact p {
+    padding: 0 20px;
+    text-align: center;
+    line-height: 15px; 
+    font-size: 0.7em; 
+    color:#707070;}
+    footer #contact ul {
+    width: 95%;
+    margin: 0 auto;
+}
+    footer #contact li {
+        margin: 0 auto;
+        padding: 0 3%;
+        font-size:0.9em;
+        margin-bottom:20px;} 
+    footer #contact li:first-of-type {
+        margin-left:3%;
+    }
+    footer #contact li:last-of-type {
+        border-right: 0px;}
+    footer #sns {
+    padding-top: 20px;
+    padding-bottom:50px;
+    
+    width: 90%;
+    margin: 0 auto;}
+            
+footer #sns a {
+    margin:0 5%;}
+}
+    
+
+/* 탑 버튼 */
+/* 탑 버튼 PC 모드 */
+@media screen and (min-width:1200px) {
+    #top_btn {
+        right:200px; 
+        bottom:100px;}
+}
+/* 탑 버튼 모바일 모드 */
+@media screen and (max-width:1200px) {
+    #top_btn {
+        right:50px; 
+        bottom:40px;}
+}
+
+#top_btn {
+    width:60px; 
+    height:60px; 
+    position: fixed; 
+    text-align: center; 
+    border-radius: 40px; 
+    line-height: 60px; 
+    border: 2px solid #b561a3; }
+
+#top_btn > a {
+    color:#b561a3}
+    </style>
+</head>
+<body>
+    <section id="mainimage">
+        <div id="main">
+            <header>
+                <div id="logo">
+                    <a href="index.html"><img src="images/logo.png" width="180px" height="auto"></a> 
+                </div>
+                <div id="mypage">
+                    <a href="sub_mypage.html"><img src="images/mypage1.png" width="80px" height="auto"></a>
+                </div>
+            </header>
+            <div id="main_text">
+                <p>맛과 건강<br>
+                모두 생각 날 때</p>
+            </div>
+        </div>
+    </section>
+    <section class="section_wrapper">
+        <div class="wrapper">
+            <div id="menu_icon">
+                <a href="index.html"><img src="images/event.png"></a>
+                <p>이벤트</p>
+            </div>
+            <h1><b>지금</b> 진행 중!</h1>
+            <div id="event_img">
+                <div><img src="images/pc_banner1.jpg"></div>
+                <div><img src="images/pc_banner2.jpg"></div>
+                <div><img src="images/pc_banner3.jpg"></div>
+                <div><img src="images/pc_banner4.jpg"></div>
+                <div><img src="images/pc_banner5.jpg"></div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="wrapper">
+            <article id="footer_logo">
+                <a href="#"><img src="images/logo2.png" width="150px" height="auto"></a>
+            </article>
+            <article id="contact">
+                <h3>About Me </h3>
+                <ul>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">입점문의</a></li>
+                    <li><a href="#">공지사항</a></li>
+                </ul>
+                <br>
+                <p>(주)young4 / 사업자등록번호 : 781-85-00412 / 주소 : 대구 북구 구암로49길 24</p>
+                <p>대표전화 : 1600-0987대표메일 : young4@hanmail.net </p>
+                <p>(주)young4는 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 상품/ 거래정보 및 거래와 관련하여 요기요에 등록된 판매자의 고의 또는 과실로 소비자에게 발생하는 손해에 대해 (주)young4로 코리아는 책임을 지지 않습니다. 상품 및 거래에 관하여 보다 정확한 정보는 해당 판매자에게 직접 확인하여 주시기 바랍니다. Copyright 053. All Rights Reserved</p>
+            </article>
+            <article id="sns">
+                <a href="https://www.facebook.com/profile.php?id=100024428093159"><img src="images/fb.png"></a>
+                <a href="#"><img src="images/ista.png"></a>
+                <a href="https://www.youtube.com/"><img src="images/ytu.png"></a>
+                <a href="https://blog.naver.com/wldms7155"><img src="images/blog.png"></a>
+            </article>
+        </div>
+    </footer>
+    <div id="top_btn" style="cursor: pointer;" onclick="location.href='#top'">
+        <a href="#top"><b>TOP</b></a>
+    </div>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery.backstretch.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="Acod/script.js"></script>
+    <script>
+          $(function() {
+             $.backstretch(
+                ["images/mainimage04.jpg", "images/mainimage03.jpg", "images/mainimage02.jpg", "images/mainimage01.jpg"],
+                {duration: 3500, fade: 750}
+            );
+            $('.bxslider').bxSlider({
+                auto:true,
+                autoHover: true,
+            });
+          });
+      </script>
+</body>
+</html>

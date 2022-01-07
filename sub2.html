@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>053</title>
+    <!-- 파비콘 링크 -->
+    <link rel="shortcut icon" href="images/053_1_kIQ_icon.ico">
+    <!-- 캐러셀 스크립트 -->
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="Acod/style.css">
+
+
+    <style>
+    /* 웹폰트 링크 */
+    @font-face {
+        font-family: 'ONE-Mobile-Regular';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'ONE-Mobile-Title';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Title.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    /* 초기화 스타일 */
+    * {margin:0;
+        padding:0;
+        box-sizing: border-box;}
+    body {background: #f4e9f3;
+        font-family: 'ONE-Mobile-Regular';}
+    a {text-decoration: none;
+        color:black;}
+    li {list-style: none;}
+
+    .section_wrapper {
+        width:100%;
+        background: #efefef;}
+    section .wrapper {
+        width :1200px; 
+        margin:0 auto; 
+        padding-bottom: 50px;}
+    /* 섹션 1 */
+    /* 섹션 1 PC모드 */
+    @media screen and (min-width:1200px) {
+        section .wrapper {
+        padding-bottom: 100px;}
+        #main #main_text p {
+        font-size:4em; 
+        line-height: 110px;}
+        #main #main_text {
+        padding-top: 40px;}
+    }
+
+    /* 섹션 1 모바일모드 */
+    @media screen and (max-width:1200px) {
+        section .wrapper {
+        width:100%;}
+        #main #logo img {
+        width:120px;
+        height:auto;}
+        #main #main_text p {
+        font-size:2.8em; 
+        line-height: 90px;}
+        #main #main_text {
+        padding-top: 80px;}
+        #mainimage #main {
+            width:100%; }
+    }
+    /* 섹션 1 메인이미지/ 주소검색 */
+    #mainimage {
+        width: 100%; 
+        height:480px;}
+    #main {
+        width:1200px; 
+        margin:0 auto;}
+
+    #main header {
+        position: relative;}
+    #main header #mypage {
+        right:0; 
+        top:0; 
+        position: absolute;}
+    #main #logo {
+        text-align: center; 
+        padding-top:40px;}
+
+    #main #main_text {
+        font-family: 'ONE-Mobile-Title';
+        text-align: right;}
+    #main #main_text p {
+        color: white; 
+        text-shadow: 4px 1px 1px rgba(0,0,0,0.2) ; 
+        letter-spacing: 0.1em;}
+
+    #menu_icon {
+        padding-bottom:50px;
+        padding-top:50px; 
+        display: flex; 
+        justify-content:center;}
+        
+    #menu_icon p {
+        font-size: 2.0em; 
+        font-family: 'ONE-Mobile-Title'; 
+        color:#b561a3; padding-top:30px; 
+        margin-left: 30px;
+        padding-top:30px;}
+    
+    /* 섹션 1 PC 모드 */
+
+    @media screen and (min-width:1200px) {
+        
+        #address input[type=text] {
+        width:950px; 
+        height:45px;}
+        #address #address_icon {
+        margin-left:60px; 
+        cursor: pointer;}
+        #address #search {
+        margin-right:60px;}
+    }
+    
+    /* 섹션 1 모바일 모드 */
+    @media screen and (max-width:1200px) {
+
+        #address input[type=text] {
+            height:45px;
+            flex:6;}
+        #address #address_icon {
+            padding: 0 20px; 
+            cursor: pointer;}
+        #address #search {
+            padding: 0 20px; }
+    }
+
+
+    #address {
+        padding-top:50px;
+        display:flex;  
+        justify-content: space-between; }
+
+    #address input[type=text] {
+        border-radius: 50px; 
+        border:2px solid #b561a3;}
+
+
+    /* 섹션 2 메뉴 */
+    
+    #menu {
+        margin:0 auto;
+        margin-bottom: 50px;}
+    #menu .item {
+        height:140px; 
+        display: flex; 
+        justify-content:center; }
+    #menu .item .item_text {
+        padding-top: 10px;}
+    #menu .item .item_text h3 {
+        text-align: center; 
+        padding-bottom:10px;}
+
+    #menu .item .item_text b {
+        color:#b561a3;}
+    #menu .item .item_text h3 p {
+        text-align: center;}
+
+
+    #menu .item > img {
+        margin: 15px;}
+
+    .dt_flex {
+        display:flex;
+        justify-content: center; 
+        padding-top: 10px;}
+    .item .delivery {
+        background: url("./images/delivery.png") center; 
+        width:50px; 
+        height: 50px; 
+        margin: 0 5px; 
+        cursor: pointer;}
+    .item .delivery:hover {
+        background: url("./images/h_delivery.png") center;
+        width:50px; 
+        height: 50px;  
+        cursor: pointer;}
+    .item .takeout {
+        background: url("./images/takeout.png") center;
+        width:50px; 
+        height: 50px; 
+        margin: 0 5px; 
+        cursor: pointer;}
+    .item .takeout:hover {
+        background: url("./images/h_takeout.png") center;
+        width:50px; 
+        height: 50px; 
+        cursor: pointer;}
+
+    
+    /* 메뉴 탭 */
+    #menu_tab {
+        margin: 0 auto; 
+        background: white; 
+        box-sizing: border-box;}
+    /* 메뉴 탭 PC모드 */
+    @media screen and (min-width:1200px) {
+        #menu_tab > div {
+        width:1028px;}
+        #menu_tab {
+        width: 1200px;}
+        #menu_tab label {
+        width:400px; 
+        height:50px;
+        line-height: 50px;}
+    }
+    /* 메뉴 탭 모바일 모드 */
+    @media screen and (min-width:471px) and (max-width:1200px) {
+        #menu_tab {
+            width:100%;}
+        #menu_tab > div {
+            width:90%;
+            margin:0 auto;
+        }
+        #menu_tab label {
+        width:33.3%; 
+        height:50px;
+        line-height: 50px;}
+        #menu_tab label:first-child {
+            margin-left:0.5px;
+        }
+    }
+    @media screen and (max-width:470px) {
+        #menu_tab {
+            width:100%;}
+        #menu_tab > div {
+            width:90%;
+            margin:0 auto;
+        }
+        #menu_tab label {
+        width:33.2%; 
+        height:50px;
+        line-height: 50px;}
+        #menu_tab label:first-child {
+        margin-left:0.5px;
+        }
+    }
+
+    #menu_tab label {
+        font-size:1.2em; 
+        display: block; 
+        float:left; 
+        background:white; 
+        text-align: center; 
+        color: #707070;
+        box-sizing: border-box; 
+        border: 1px solid rgba(150,150,150,0.5); 
+        cursor: pointer; 
+        font-weight: lighter;}
+
+    /* radio, div 숨기기 */
+    #menu_tab > input {
+        display: none;}
+
+    #menu_tab > div {
+        display: none; 
+
+        margin:0 auto; 
+        padding:150px 0px;}
+    
+
+    /* 첫번쨰 라디오 버튼 눌럿을 때 첫번째 div 보여라~ */
+    #menu_tab > input:nth-of-type(1):checked ~ div:nth-of-type(1) {
+        display: block;}
+    #menu_tab > input:nth-of-type(2):checked ~ div:nth-of-type(2) {
+        display: block;}
+    #menu_tab > input:nth-of-type(3):checked ~ div:nth-of-type(3) {
+        display: block;}
+
+    #menu_tab label:hover {
+        color: blueviolet; 
+        cursor:pointer;} 
+
+    /* 첫번째 라디오 눌럿을때 라벨 표시 */
+    #menu_tab > input:nth-of-type(1):checked ~ .menu_buttons > label:nth-of-type(1) {
+        color:#b561a3; 
+        border-bottom: 3px solid #b561a3;}
+    #menu_tab > input:nth-of-type(2):checked ~ .menu_buttons > label:nth-of-type(2) {
+        color:#b561a3; 
+        border-bottom: 3px solid #b561a3;}
+    #menu_tab > input:nth-of-type(3):checked ~ .menu_buttons > label:nth-of-type(3) {
+        color:#b561a3; 
+        border-bottom: 3px solid #b561a3;}
+
+    /* 베스트 메뉴 */
+    #best_title {
+        display:flex; 
+        justify-content: center;
+        margin-bottom:50px;}
+    #best_title h2 {
+        color:#b561a3; 
+        font-size: 2.0em; 
+        padding-top: 10px;
+        margin: 0 10px;}
+    /* 베스트 메뉴 탭 PC모드 */
+    @media screen and (min-width:1200px) {
+        #best #best_menu {
+        width:900px;
+        margin: 0 auto;}
+    }
+    /* 베스트 메뉴 탭 모바일 모드 */
+    @media screen and (max-width:1200px) {
+        #best #best_menu img {
+        width:100%;
+        margin: 0 auto;}
+    }
+
+    /* 메뉴 div */
+    div h5 {
+        font-size: 1.3em;
+        color:#707070;
+        margin: 20px;}
+
+    /* 정보 */
+    .information {
+        padding-bottom:50px;}
+    .information:last-child {
+        padding-bottom:0px;}
+    .information h3 {
+        padding-bottom: 10px; 
+        margin-bottom: 10px; 
+        border-bottom: 1px solid rgba(150,150,150,0.7); 
+        font-size: 1.3em;}
+    .infotmation p {
+        line-height: 15px;}
+    .information b {
+        color:#b561a3;}
+    
+    /* 리뷰 */
+    /* 리뷰 PC모드 */
+    @media screen and (min-width:1200px) {
+        #review {
+        width:60%;
+        margin: 0 auto;
+    }
+        #review_star {
+        width:40%;
+        margin: 0 auto;}
+    }
+    /* 리뷰 모바일 모드 */
+    @media screen and (max-width:1200px) {
+        #review {
+        width:100%;
+    }
+        .information img {
+            width: 100%;
+        }
+    }
+    
+    #review_star {
+        display:flex;
+        justify-content: center;
+        overflow: hidden;}
+    #review_star p {
+        color:#b561a3;
+    }
+    #review_star h2 {
+        font-size: 3.0em;
+        margin-bottom: 10px;
+        padding-top: 5px;
+        color:#333333;
+    }
+    #review_star #review_line01 {
+        padding-right: 10px;
+        border-right: 1px solid rgba(150,150,150,0.7); 
+    }
+    #review_star #review_line02 {
+        padding-left:10px;
+    }
+    #review_star .review_flex {
+        width:100%;
+        display : flex;
+        justify-content: space-between;
+        line-height: 30px;
+    }
+    #review_star .review_flex b {
+        margin-right:10px;
+        color:#333333;
+    }
+
+    #review_text {
+        margin-top:50px;
+        margin-bottom:40px;
+    }
+    #review input {
+        cursor: pointer;
+        padding: 10px 0px;
+        color:white;
+        width:100%;
+        margin: 0 auto;
+        background: #b561a3;
+        border: 1px solid #b561a3;
+        border-radius: 30px;
+        font-size: 1.4em;
+        font-weight: bold;
+    }
+    
+/* 푸터 */
+footer {
+        background: #efefef;
+    }
+    footer #contact li {
+    float:left; 
+    border-right: 1px solid black; 
+    }
+
+    /* 푸터 PC모드 */
+    @media screen and (min-width:1200px) {
+    footer .wrapper {
+        width : 1200px;
+        height: 440px;
+        margin:0 auto; 
+        display:flex;}
+    footer #footer_logo {
+        margin-top: 180px; 
+        flex:1;}
+    footer #footer_logo img {
+        width:150px;
+        height:auto;
+    }
+    footer #contact {
+        flex:4; 
+        margin-top: 130px;}
+    footer #contact li {
+        padding-right: 20px; 
+        padding-left:20px;
+        margin-bottom:10px;}
+    footer #contact li:first-of-type {
+        padding-left: 0px;}
+    footer #contact li:last-of-type {
+        border-right: 0px;}
+
+    footer #contact h3 {
+        font-size: 2.0em; 
+        font-family: 'ONE-Mobile-Title' ; 
+        margin-bottom:15px;}
+    footer #contact p {
+        margin-top: 10px; 
+        line-height: 20px; 
+        font-size: 0.8em; 
+        color:#707070;}
+    footer #sns {
+        margin-top:120px; 
+        flex:1.5;}
+        
+    footer #sns a {
+        margin-right:20px; }
+    footer #sns a:last-child {
+        margin-right:0;}
+    
+}
+
+/* 푸터 중간 모드 */
+@media screen and (min-width:800px) and (max-width:1200px) {
+    footer .wrapper {
+            width:90%;
+            margin:0 auto;}
+    footer #footer_logo {
+            width:100px;
+            margin: 0 auto;
+            padding:30px 0px;}
+    footer #footer_logo img {
+            width:100px;
+            height:auto;}
+    footer #contact h3 {
+        display:none;
+    }
+    footer #contact p {
+        padding: 0 20px;
+        text-align: center;
+        line-height: 15px; 
+        font-size: 0.7em; 
+        color:#707070;}
+    footer #contact ul {
+        width: 90%;
+        margin: 0 auto;
+    }
+    footer #contact li {
+            padding: 0 8%;
+            font-size:0.9em;
+            margin-bottom:20px;} 
+    footer #contact li:last-of-type {
+            border-right: 0px;}
+    footer #sns {
+        padding-top: 20px;
+        width: 80%;
+        margin: 0 auto;}
+                
+    footer #sns a {
+        margin:0 9%;}
+    }
+
+/* 푸터 모바일 모드 */
+
+@media screen and (max-width:800px) {
+    footer .wrapper {
+        width:90%;
+        margin:0 auto;}
+    footer #footer_logo {
+        width:100px;
+        margin: 0 auto;
+        padding:30px 0px;}
+    footer #footer_logo img {
+        width:100px;
+        height:auto;}
+    footer #contact h3 {
+    display:none;
+}
+    footer #contact p {
+    padding: 0 20px;
+    text-align: center;
+    line-height: 15px; 
+    font-size: 0.7em; 
+    color:#707070;}
+    footer #contact ul {
+    width: 95%;
+    margin: 0 auto;
+}
+    footer #contact li {
+        margin: 0 auto;
+        padding: 0 3%;
+        font-size:0.9em;
+        margin-bottom:20px;} 
+    footer #contact li:first-of-type {
+        margin-left:3%;
+    }
+    footer #contact li:last-of-type {
+        border-right: 0px;}
+    footer #sns {
+    padding-top: 20px;
+    padding-bottom:50px;
+    
+    width: 90%;
+    margin: 0 auto;}
+            
+footer #sns a {
+    margin:0 5%;}
+}
+    
+
+/* 탑 버튼 */
+/* 탑 버튼 PC 모드 */
+@media screen and (min-width:1200px) {
+    #top_btn {
+        right:200px; 
+        bottom:100px;}
+}
+/* 탑 버튼 모바일 모드 */
+@media screen and (max-width:1200px) {
+    #top_btn {
+        right:50px; 
+        bottom:40px;}
+}
+
+#top_btn {
+    width:60px; 
+    height:60px; 
+    position: fixed; 
+    text-align: center; 
+    border-radius: 40px; 
+    line-height: 60px; 
+    border: 2px solid #b561a3; }
+
+#top_btn > a {
+    color:#b561a3}
+
+    </style>
+</head>
+<body>
+    <section id="mainimage">
+        <div id="main">
+            <header>
+                <div id="logo">
+                    <a href="index.html"><img src="images/logo.png" width="180px" height="auto"></a> 
+                </div>
+                <div id="mypage">
+                    <a href="sub_mypage.html"><img src="images/mypage1.png" width="80px" height="auto"></a>
+                </div>
+            </header>
+            <div id="main_text">
+                <p>맛과 건강<br>
+                모두 생각 날 때</p>
+            </div>
+        </div>
+    </section>
+    <section class="section_wrapper">
+        <div class="wrapper">
+            <div id="menu_icon">
+                <a href="sub_수정2.html"><img src="images/chicken.png"></a>
+                <p>치킨</p>
+            </div>
+            <div id="address">
+                <div id="address_icon">
+                    <a href="https://www.google.com/maps/@35.9417306,128.5585406,15z?hl=ko" target="_blank"><img src="images/address.png"></a>
+                </div>
+                <input type="text" size="15" name="address"/>
+                <div id="search">
+                    <input type="image" src="images/search.png" alt="검색버튼">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section_wrapper">
+        <div class="wrapper">
+            <div id="menu">
+                <div class="item">
+                    <img src="images/chicken04.png">
+                    <div class="item_text">
+                        <h3>멕시카나 치킨</h3>
+                        <P><b>★4.8</b>/ 리뷰 1384</P>
+                        <div class="dt_flex">
+                            <div class="delivery"></div>
+                            <div class="takeout"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="menu_tab">
+                <input id="menu_1" type="radio" name="menu_tab" checked="checked"/>
+                <input id="menu_2" type="radio" name="menu_tab"/>
+                <input id="menu_3" type="radio" name="menu_tab"/>
+                <section class="menu_buttons">
+                    <label for="menu_1">메뉴</label>
+                    <label for="menu_2">정보</label>
+                    <label for="menu_3">리뷰</label>
+                </section>
+                <div>
+                    <div id="best">
+                        <div id="best_title">
+                            <img src="images/star_l.png">
+                            <h2>BEST MENU</h2>
+                            <img src="images/star_r.png">
+                        </div>
+                        <div id="best_menu"><img src="images/best.jpg"></div>
+                    </div>
+                    <section id="menu_wrapper">
+                        <div class="container">
+                           <ul class="accordion">
+                              <li class="item">
+                                 <h2 class="accordionTitle">인기메뉴<span class="accIcon"></span></h2>
+                                 <div class="text">
+                                     <div class="menu">
+                                        <div>
+                                            <h3>투마리세트</h3>
+                                            <p>치킨 두 종류 선택</p>
+                                            <h4>22,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_1.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>반반치킨</h3>
+                                            <p>반반 두 종류 선택</p>
+                                            <h4>15,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_2.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>순살반반</h3>
+                                            <p>순살반반 두 종류 선택</p>
+                                            <h4>16,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_3.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>순살세트</h3>
+                                            <p>순살치킨 두 종류 선택</p>
+                                            <h4>22,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_4.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>후라이드치킨</h3>
+                                            <p>바삭바삭~ 소리까지 맛있는 오리지날 후라이드치킨</p>
+                                            <h4>16,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_1.png"></div>
+                                    </div>
+                                </div>
+                              </li>
+                              <li class="item">
+                                 <h2 class="accordionTitle">한마리치킨<span class="accIcon"></span></h2>
+                                 <div class="text">
+                                    <div class="menu">
+                                        <div>
+                                            <h3>달콤라떼치킨</h3>
+                                            <p>바삭한 치킨과 달콤하고 부드러운 라떼소스의 맛남</p>
+                                            <h4>18,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_1.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>모두의마요치킨</h3>
+                                            <p>모두의마음을 사로잡는 달콤고소한 치킨（갈릭찹찹소스 증정）</p>
+                                            <h4>18,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_2.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>까르보불닭치킨</h3>
+                                            <p>불닭치킨의 매운맛에 부드러운 크림맛을 더했다. 화끈한 불닭소스와 크림소스의 환상적인 케미~</p>
+                                            <h4>16,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_3.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>뿌리고(오리지날)</h3>
+                                            <p>바삭한 치킨에 알싸한 땡초의 풍미가 더해진 '맵.단.짠' 시즈닝 치킨. 구.뿌리고치킨</p>
+                                            <h4>18,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_4.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>불닭치킨</h3>
+                                            <p>삼양 불닭소스와 멕시카나 치킨의 화끈한 콜라보</p>
+                                            <h4>18,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_5.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>뿌리고(매콤달콤한맛)</h3>
+                                            <p>바삭한 후라이드 치킨 위에 매콤달콤한 치토스맛 시즈닝이 사르르~</p>
+                                            <h4>18,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_6.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>강정치킨（뼈）</h3>
+                                            <p>남녀노소 누구나 좋아하는 닭강정 맛</p>
+                                            <h4>17,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_7.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>간장치킨</h3>
+                                            <p>구.골드치킨（간장）, 단짠단짠 풍미깊은 간장맛 치킨</p>
+                                            <h4>17,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_8.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>뿌리고（눈꽃치즈맛）</h3>
+                                            <p>구.눈꽃치즈치킨, 보슬보슬 치즈 눈꽃이 가득~한 메뉴!</p>
+                                            <h4>19,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_9.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>땡초치킨</h3>
+                                            <p>매운맛의 진수! 멕시카나의 화끈하고 얼얼한 치킨 맛을 보여드립니다.</p>
+                                            <h4>19,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_10.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>양념치킨</h3>
+                                            <p>오리지날 양념 맛이 살아있는 멕시카나의 시그니처 메뉴!</p>
+                                            <h4>17,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_11.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>후라이드치킨</h3>
+                                            <p>바삭바삭~ 소리까지 맛있는 오리지날 후라이드치킨</p>
+                                            <h4>16,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_12.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>통구이</h3>
+                                            <h4>18,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_13.png"></div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li class="item">
+                                 <h2 class="accordionTitle">순살한마리<span class="accIcon"></span></h2>
+                                 <div class="text">
+                                    <div class="menu">
+                                        <div>
+                                            <h3>순살달콤라떼치킨</h3>
+                                            <p>바삭한 치킨과 달콤하고 부드러운 라떼소스의 맛남</p>
+                                            <h4>19,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_1.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>모순살모두의마요치킨</h3>
+                                            <p>모두의마음을 사로잡는 달콤고소한 치킨（갈릭찹찹소스 증정）</p>
+                                            <h4>19,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_2.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>순살까르보불닭치킨</h3>
+                                            <p>불닭치킨의 매운맛에 부드러운 크림맛을 더했다. 화끈한 불닭소스와 크림소스의 환상적인 케미~</p>
+                                            <h4>19,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_3.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>순살뿌리고（오리지날）</h3>
+                                            <p>바삭한 치킨에 알싸한 땡초의 풍미가 더해진 '맵.단.짠' 시즈닝 치킨. 구.뿌리고치킨</p>
+                                            <h4>19,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_4.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>순살불닭치킨</h3>
+                                            <p>삼양 불닭소스와 멕시카나 치킨의 화끈한 콜라보</p>
+                                            <h4>19,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_5.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>순살뿌리고（매콤달콤한맛）</h3>
+                                            <p>바삭한 후라이드 치킨 위에 매콤달콤한 치토스맛 시즈닝이 사르르~</p>
+                                            <h4>19,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_6.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>순살강정치킨</h3>
+                                            <p>남녀노소 누구나 좋아하는 닭강정 맛</p>
+                                            <h4>19,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_7.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>순살간장치킨</h3>
+                                            <p>구.골드치킨（간장）, 단짠단짠 풍미깊은 간장맛 치킨</p>
+                                            <h4>18,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_8.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>순살뿌리고（눈꽃치즈맛）</h3>
+                                            <p>구.눈꽃치즈치킨, 보슬보슬 치즈 눈꽃이 가득~한 메뉴!</p>
+                                            <h4>19,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_9.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>순살땡초치킨</h3>
+                                            <p>매운맛의 진수! 멕시카나의 화끈하고 얼얼한 치킨 맛을 보여드립니다.</p>
+                                            <h4>20,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_10.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>순살양념치킨</h3>
+                                            <p>오리지날 양념 맛이 살아있는 멕시카나의 시그니처 메뉴!</p>
+                                            <h4>18,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_11.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>순살후라이드치킨</h3>
+                                            <p>바삭바삭~ 소리까지 맛있는 오리지날 후라이드치킨</p>
+                                            <h4>17,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_12.png"></div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li class="item">
+                                 <h2 class="accordionTitle">인기세트<span class="accIcon"></span></h2>
+                                 <div class="text">
+                                    <div class="menu">
+                                        <div>
+                                            <h3>까르보불닭치킨＋치즈돈까스＋콜라1.25L</h3>
+                                            <p>까르보불닭치킨, 치즈돈까스 3입, 콜라1.25L 세트</p>
+                                            <h4>25,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_28.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>불닭치킨＋더블치즈볼＋콜라1.25L</h3>
+                                            <p>불닭치킨, 더블치즈볼 5입, 콜라1.25L 세트</p>
+                                            <h4>24,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_29.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>뿌리고（오리지날）＋더블치즈볼＋콜라1.25L</h3>
+                                            <p>뿌리고（오리지날）, 더블치즈볼 5입, 콜라1.25L 세트</p>
+                                            <h4>24,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_30.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>뿌리고（매콤달콤한맛）＋더블치즈볼＋콜라1.25L</h3>
+                                            <p>뿌리고（매콤달콤한맛）, 더블치즈볼 5입, 콜라1.25L 세트</p>
+                                            <h4>24,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_31.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>반반치킨（후／양）＋더블치즈볼＋콜라1.25L</h3>
+                                            <p>반반치킨（후라이드＋양념）, 더블치즈볼 5입, 콜라1.25L 세트</p>
+                                            <h4>23,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_32.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>후라이드치킨＋더블치즈볼＋콜라1.25L</h3>
+                                            <p>후라이드, 더블치즈볼 5입, 콜라1.25L 세트</p>
+                                            <h4>22,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_33.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>땡초치킨＋더블치즈볼＋콜라1.25L</h3>
+                                            <p>땡초치킨, 더블치즈볼 5입, 콜라1.25L 세트</p>
+                                            <h4>24,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_34.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>불닭치킨＋수작미니핫도그＋콜라1.25L</h3>
+                                            <p>불닭치킨, 수작미니핫도그 4입, 콜라1.25L 세트</p>
+                                            <h4>25,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_35.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>양념치킨＋더블치즈볼＋콜라1.25L</h3>
+                                            <p>양념치킨, 더블치즈볼 5입, 콜라1.25L 세트</p>
+                                            <h4>23,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_36.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>강정치킨＋더블치즈볼＋콜라1.25L</h3>
+                                            <p>（뼈닭）강정치킨, 더블치즈볼 5입, 콜라1.25L 세트</p>
+                                            <h4>23,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_37.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>간장치킨＋더블치즈볼＋콜라1.25L</h3>
+                                            <p>간장치킨, 더블치즈볼 5입, 콜라1.25L 세트</p>
+                                            <h4>23,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_38.png"></div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li class="item">
+                                 <h2 class="accordionTitle">찜닭구이<span class="accIcon"></span></h2>
+                                 <div class="text">
+                                    <div class="menu">
+                                        <div>
+                                            <h3>야채찜닭</h3>
+                                            <h4>22,000원</h4>
+                                        </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li class="item">
+                                <h2 class="accordionTitle">반반치킨<span class="accIcon"></span></h2>
+                                <div class="text">
+                                    <div class="menu">
+                                        <div>
+                                            <h3>반반치킨</h3>
+                                            <p>반반 두 종류 선택</p>
+                                            <h4>15,000원</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                             </li>
+                             <li class="item">
+                                <h2 class="accordionTitle">순살반반<span class="accIcon"></span></h2>
+                                <div class="text">
+                                    <div class="menu">
+                                        <div>
+                                            <h3>순살반반</h3>
+                                            <p>순살반반 두 종류 선택</p>
+                                            <h4>16,000원</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                             </li>
+                             <li class="item">
+                                <h2 class="accordionTitle">투마리세트<span class="accIcon"></span></h2>
+                                <div class="text">
+                                    <div class="menu">
+                                        <div>
+                                            <h3>투마리세트</h3>
+                                            <p>치킨 두 종류 선택</p>
+                                            <h4>22,000원</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                             </li>
+                             <li class="item">
+                                <h2 class="accordionTitle">순살세트<span class="accIcon"></span></h2>
+                                <div class="text">
+                                    <div class="menu">
+                                        <div>
+                                            <h3>순살세트</h3>
+                                            <p>순살치킨 두 종류 선택</p>
+                                            <h4>22,000원</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                             </li>
+                             <li class="item">
+                                <h2 class="accordionTitle">부위별 메뉴<span class="accIcon"></span></h2>
+                                <div class="text">
+                                    <div class="menu">
+                                        <div>
+                                            <h3>멕시윙(후라이드)</h3>
+                                            <p>바삭하고 쫄깃한 닭 날개 후라이드</p>
+                                            <h4>18,000원</h4>
+                                        </div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>멕시듀오(다리+날개)</h3>
+                                            <h4>18,000원</h4>
+                                        </div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>매콤한윙</h3>
+                                            <p>바삭한 윙과 매콤한 소스의 만남!</p>
+                                            <h4>20,000원</h4>
+                                        </div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>간장소스윙</h3>
+                                            <p>바삭한 윙과 중독성 있는 짭쪼름한 소스의 만남!</p>
+                                            <h4>18,000원</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                             </li>
+                             <li class="item">
+                                <h2 class="accordionTitle">사이드메뉴 / 음료<span class="accIcon"></span></h2>
+                                <div class="text">
+                                    <div class="menu">
+                                        <div>
+                                            <h3>더블치즈볼</h3>
+                                            <p>체다치즈와 모짜렐라치즈가 만나 풍미가 두배! 바삭쫀득 치즈볼!</p>
+                                            <h4>4,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_14.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>커피콩빵 (8개입)</h3>
+                                            <h4>3,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_15.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>케이준 V컷 감자</h3>
+                                            <p>V컷 모양으로 겉바속촉 제대로, 케이준 시즈닝으로 매콤하게, 넓어진 튀김 면적으로 바삭함 그대로~</p>
+                                            <h4>3,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_16.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>나초튀김</h3>
+                                            <p>매콤한 데빌코코소스와 함께 즐기는 고소하고 바삭한 나초튀김</p>
+                                            <h4>3,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_17.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>치즈돈까스</h3>
+                                            <p>수제로 만들어 바삭하고 얇은 돈까스 속에 고소하고 쫄깃한 모짜렐라 치즈가 한가득.</p>
+                                            <h4>5,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_18.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>수작미니핫도그</h3>
+                                            <p>겉바속촉! 손으로 빚어 바삭하고 쫄깃한 수제 미니 핫도그, 매콤한 불닭치킨과 찰떡 궁합!</p>
+                                            <h4>5,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_19.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>새우링</h3>
+                                            <p>담백한 새우맛이 한가득. 바삭한 새우링</p>
+                                            <h4>3,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_20.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>고추튀김</h3>
+                                            <p>속이 가득찬 바삭한 고추튀김</p>
+                                            <h4>3,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_21.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>갈릭찹찹소스</h3>
+                                            <p>아삭한 야채토핑 가득한 새콤, 달콤, 매콤한 스페셜 소스. 치킨을 더욱 특별하게 즐기고 싶다면</p>
+                                            <h4>1,500원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_22.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>데빌코코소스</h3>
+                                            <p>풍미깊은 매콤함으로 어떤 치킨에도 어울리는 소스</p>
+                                            <h4>1,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_23.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>엔젤코코소스 추가</h3>
+                                            <p>치킨의 맛을 업 시켜주는 부드럽고 상큼한 소스</p>
+                                            <h4>1,000원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_24.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>양념소스 추가</h3>
+                                            <h4>500원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_25.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>머스터드 소스 추가</h3>
+                                            <h4>500원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_26.png"></div>
+                                    </div>
+                                    <div class="menu">
+                                        <div>
+                                            <h3>쿨피스 930ml</h3>
+                                            <h4>1,500원</h4>
+                                        </div>
+                                        <div class="menu_img"><img src="images/menu_chicken_27.png"></div>
+                                    </div>
+                                </div>
+                             </li>
+                           </ul>
+                        </div>
+                    </section>
+                    <a href="#"><h5>원산지 정보</h5></a>
+                </div>
+                <div id="information_wrapper">
+                    <div class="information">
+                        <h3>사장님 알림</h3>
+                        <p>#정성을 다하는  <b>멕시카나 대구점</b> 입니다.</p><br>
+                        <p>언제 어디서나 멕시카나</p><br>
+                        <p>맛있게 드셨다면 찜 꾹~ 리뷰를 작성해주세요!</p><br>
+                        <p>매장을 운영하는 데 큰 도움이 됩니다^_^!</p>
+                    </div>
+                    <div class="information">
+                        <h3>업체정보</h3>
+                        <p>영업시간 <b>11:00 - 23:00 </b></p><br>
+                        <p>전화번호 <b>050352540183</b>(안심번호)</p><br>
+                        <p>주소 <b>대구 동구 용계동 517-2 1층</b></p><br>
+                        <p>부가정보 <b>세스코멤버스 사업장</b></p><br>
+                    </div>
+                    <div class="information">
+                        <h3>결제정보</h3>
+                        <p>최소주문금액 <b>15,000원</b></p><br>
+                        <p>결제수단 <b>신용카드,현금,053결제</b></p><br>
+                    </div>
+                    <div class="information">
+                        <h3>사업자정보</h3>
+                        <p>상호명 <b>멕시카나</b></p><br>
+                        <p>사업자등록번호 <b>123-45-67890</b></p><br>
+                    </div>
+                    <div class="information">
+                        <h3>원산지정보</h3>
+                        <p>한마리치킨:닭고기(국내산)</p><br>
+                        <p>순살치킨:닭고기(국내산)</p><br>
+                        <p>멕시윙:닭고기(국내산/태국산)</p><br>
+                        <p>멕시핀:닭고기(국내산)</p><br>
+                        <p>멕시듀오:윙>닭고기(국내산/태국산),핀>닭고기(국내산)</p><br>
+                        <p>새우링:새우(베트남산)</p><br>
+                        <p>고추튀김:돼지고기(국내산)</p><br>
+                        <p>치즈돈까스:돼지고기(미국산)</p><br>
+                    </div>
+                </div>
+                <div>
+                    <div id="review">
+                        <div id="review_star">
+                            <div id="review_line01">
+                                <h2>4.8</h2>
+                                <p>★★★★☆</p>
+                            </div>
+                            <div id="review_line02">
+                                <div class="review_flex">
+                                    <b>맛</b>
+                                    <p>★★★★☆ 4.8</p>
+                                </div>
+                                <div class="review_flex">
+                                    <b>양</b>
+                                    <p>★★★★☆ 4.8</p>
+                                </div>
+                                <div class="review_flex">
+                                    <b>배달</b>
+                                    <p>★★★★☆ 4.8</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="review_text">
+                            <div class="information">
+                                <h3>ee**님</h3>
+                                <p><b>★★★★★ 맛 ★ 5 양 ★ 5 배달 ★ 5</b></p><br>
+                                <p>쿠폰 다 모아갑니다 맛나요</p><br>
+                                <img src="images/review05.png">
+                            </div>
+                            <div class="information">
+                                <h3>kc**님</h3>
+                                <p><b>★★★★★ 맛 ★ 5 양 ★ 5 배달 ★ 5</b></p><br>
+                                <p>간장치킨 맛있게 잘먹었어요~~</p><br>
+                            </div>
+                            <div class="information">
+                                <h3>su**님</h3>
+                                <p><b>★★★★★ 맛 ★ 5 양 ★ 5 배달 ★ 5</b></p><br>
+                                <p>비오는데 배달해주셔서 오늘도 맛있게잘먹었습니다.감사합니다.</p><br>
+                            </div>
+                            <div class="information">
+                                <h3>su**님</h3>
+                                <p><b>★★★★★ 맛 ★ 5 양 ★ 5 배달 ★ 5</b></p><br>
+                                <p>초복을 앞두고 최애 간장치킨!!! 정신없이 먹다보니 반쯤 먹고 찍었음 ㅋ 바싹한 튀김옷에 간장의 절묘한 조합 강추!강추! 너무 맛있어요 ~ 양도 많고 배달도 신속하게 빨리 왔습니다 ~사장님 번창하세요 ~^^</p><br>
+                                <img src="images/review04.png"><br>
+                            </div>
+                            <div class="information">
+                                <h3>th**님</h3>
+                                <p><b>★★★★★ 맛 ★ 5 양 ★ 5 배달 ★ 5</b></p><br>
+                                <p>소스도 듬뿍 넘 맛있어요 맛있게 잘 먹었습니다</p><br>
+                                <img src="images/review03.png"><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="display: none;">
+                                <div class="information">
+                                    <h3>05**님</h3>
+                                    <p><b>★★★★★ 맛 ★ 5 양 ★ 5 배달 ★ 5</b></p><br>
+                                    <p>애들이 잘먹네요.. 배달도 빠르고 좋았습니당 바삭,고소한 치킨을 좋아해서 후라이드가 인기 많았어요. 다음에 또 주문하겠습니다</p><br>
+                                    <img src="images/review02.png"><br>
+                                </div>
+                                <div class="information">
+                                    <h3>se**님</h3>
+                                    <p><b>★★★★★ 맛 ★ 5 양 ★ 5 배달 ★ 5</b></p><br>
+                                    <p>처음 먹었는데 맛있었어요~</p><br>
+                                </div>
+                                <div class="information">
+                                    <h3>ah**님</h3>
+                                    <p><b>★★★★★ 맛 ★ 5 양 ★ 5 배달 ★ 5</b></p><br>
+                                    <p>바삭하고 양념도 맛있어요.</p><br>
+                                    <img src="images/review01.png"><br>
+                                </div>
+                                <div class="information">
+                                    <h3>jl**님</h3>
+                                    <p><b>★★★★★ 맛 ★ 5 양 ★ 5 배달 ★ 5</b></p><br>
+                                    <p>양념소스랑 은근히 잘어울리네요</p><br>
+                                </div>
+                                <div class="information">
+                                    <h3>gi**님</h3>
+                                    <p><b>★★★★★ 맛 ★ 5 양 ★ 5 배달 ★ 5</b></p><br>
+                                    <p>맛있어요 잘먹었어요</p><br>
+                                </div>
+                            </div>
+                            <input value="더보기" onclick="if(this.parentNode.getElementsByTagName('div')[0].style.display != ''){this.parentNode.getElementsByTagName('div')[0].style.display = '';this.value = '숨기기';}else{this.parentNode.getElementsByTagName('div')[0].style.display = 'none'; this.value = '더보기';}" type="button" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        <div class="wrapper">
+            <article id="footer_logo">
+                <a href="#"><img src="images/logo2.png" width="150px" height="auto"></a>
+            </article>
+            <article id="contact">
+                <h3>About Me </h3>
+                <ul>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">입점문의</a></li>
+                    <li><a href="#">공지사항</a></li>
+                </ul>
+                <br>
+                <p>(주)young4 / 사업자등록번호 : 781-85-00412 / 주소 : 대구 북구 구암로49길 24</p>
+                <p>대표전화 : 1600-0987대표메일 : young4@hanmail.net </p>
+                <p>(주)young4는 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 상품/ 거래정보 및 거래와 관련하여 요기요에 등록된 판매자의 고의 또는 과실로 소비자에게 발생하는 손해에 대해 (주)young4로 코리아는 책임을 지지 않습니다. 상품 및 거래에 관하여 보다 정확한 정보는 해당 판매자에게 직접 확인하여 주시기 바랍니다. Copyright 053. All Rights Reserved</p>
+            </article>
+            <article id="sns">
+                <a href="https://www.facebook.com/profile.php?id=100024428093159"><img src="images/fb.png"></a>
+                <a href="#"><img src="images/ista.png"></a>
+                <a href="https://www.youtube.com/"><img src="images/ytu.png"></a>
+                <a href="https://blog.naver.com/wldms7155"><img src="images/blog.png"></a>
+            </article>
+        </div>
+    </footer>
+    <div id="top_btn" style="cursor: pointer;" onclick="location.href='#top'">
+        <a href="#top"><b>TOP</b></a>
+    </div>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery.backstretch.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="Acod/script.js"></script>
+    <script>
+          $(function() {
+             $.backstretch(
+                ["images/mainimage04.jpg", "images/mainimage03.jpg", "images/mainimage02.jpg", "images/mainimage01.jpg"],
+                {duration: 3500, fade: 750}
+            );
+            $('.bxslider').bxSlider({
+                auto:true,
+                autoHover: true,
+            });
+          });
+      </script>
+</body>
+</html>
